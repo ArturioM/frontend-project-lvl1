@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync'
 export function getRandomInRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
-
+export const name = () => readlineSync.question('May I have your name? ')
 export const question = () => readlineSync.question('Your answer: ')
 let counter = 0
 export const result = (userName) => {
