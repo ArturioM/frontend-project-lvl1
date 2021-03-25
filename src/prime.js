@@ -9,26 +9,27 @@ export function getRandomInRange(min, max) {
 
 let counter = 0
 export const result = (userName) => {
-  const number1 = getRandomInRange(6, 15)
+  const numberSimple = getRandomInRange(1, 100)
+  const conculatition = (numberSimple) => {
+    for (let i = 2; i < numberSimple; i += 1) {
+      if (numberSimple % i === 0) {
+        return 'no'
+      }
+    }
+    return 'yes'
+  }
 
-  const conculation = num
+  const conculationResult = conculatition(numberSimple)
 
-  const conculationResult = conculation(
-    number1,
-    number2,
-    number12,
-    number3
-  ).join(' ')
-
-  console.log(`Question: ${conculationResult}`)
+  console.log(`Question: ${numberSimple}`)
   const answer = question()
-  if (Number(answer) === numberNeed) {
+  if (answer === conculationResult) {
     console.log('Correct!')
     counter += 1
     return resultRepeat(userName)
   } else {
     console.log(
-      `${answer} is wrong answer ;(. Correct answer was ${numberNeed} 
+      `${answer} is wrong answer ;(. Correct answer was ${conculationResult} 
           \nLet's try again, again!, ${userName}!`
     )
   }

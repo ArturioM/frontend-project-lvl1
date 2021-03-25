@@ -15,7 +15,7 @@ export const result = (userName) => {
 
   const conculation = (number1, number2, bigNumber) => {
     let res = 0
-    for (let i = 0; i < bigNumber; i += 1) {
+    for (let i = 0; i <= bigNumber; i += 1) {
       if (number1 % i === 0 && number2 % i === 0) {
         res = i
       }
