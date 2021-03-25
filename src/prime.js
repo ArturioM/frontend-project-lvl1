@@ -9,30 +9,15 @@ export function getRandomInRange(min, max) {
 
 let counter = 0
 export const result = (userName) => {
-  const numberStart = getRandomInRange(6, 15)
-  const numberStep = getRandomInRange(3, 6)
-  const numberEmpty = getRandomInRange(1, 8)
-  const numberNeed = numberStart + numberStep * (numberEmpty + 1)
+  const number1 = getRandomInRange(6, 15)
 
-  const conculation = (numberStart, numberStep, numberEmpty) => {
-    let result = []
-    let partResult = numberStart
-    for (let i = 0; i < 9; i += 1) {
-      if (i === numberEmpty) {
-        result.push('..')
-        partResult += numberStep
-        i += 1
-      }
-      partResult += numberStep
-      result.push(partResult)
-    }
-    return result
-  }
+  const conculation = num
 
   const conculationResult = conculation(
-    numberStart,
-    numberStep,
-    numberEmpty
+    number1,
+    number2,
+    number12,
+    number3
   ).join(' ')
 
   console.log(`Question: ${conculationResult}`)
