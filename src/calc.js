@@ -11,10 +11,10 @@ let counter = 0
 export const result = (userName) => {
   const number1 = getRandomInRange(1, 10)
   const number2 = getRandomInRange(1, 10)
-  const numberOperator = getRandomInRange(0, 2)
+  const randomOperator = getRandomInRange(0, 2)
   const operators = ['+', '-', '*']
   const calculation = (num1, num2, numberOperator, operators) => {
-    switch (operators[numberOperator]) {
+    switch (operators[randomOperator]) {
       case '+':
         return num1 + num2
 
@@ -25,13 +25,13 @@ export const result = (userName) => {
         return num1 * num2
     }
   }
-  const operator = operators[numberOperator]
+  const operator = operators[randomOperator]
   console.log(`Question: ${number1} ${operator} ${number2}`)
   const answer = question()
   const conculationResult = calculation(
     number1,
     number2,
-    numberOperator,
+    randomOperator,
     operators
   )
   if (Number(answer) === conculationResult) {
