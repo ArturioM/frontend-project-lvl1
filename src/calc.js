@@ -13,7 +13,7 @@ export const result = (userName) => {
   const number2 = getRandomInRange(1, 10)
   const randomOperator = getRandomInRange(0, 2)
   const operators = ['+', '-', '*']
-  const calculation = (num1, num2, numberOperator, operators) => {
+  const calculation = (num1, num2, randomOperator, operators) => {
     switch (operators[randomOperator]) {
       case '+':
         return num1 + num2
