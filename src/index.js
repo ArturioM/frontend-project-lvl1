@@ -1,6 +1,22 @@
 import readlineSync from 'readline-sync'
 
-console.log('Welcome to the Brain Games!')
-const name = () => readlineSync.question('May I have your name? ')
-const userName = name()
-console.log(`Hello, ${userName}!`)
+const result = (userName) => {
+  if (Number(answer) === conculationResult) {
+    console.log('Correct!')
+    counter += 1
+    return resultRepeat(userName)
+  } else {
+    console.log(
+      `${answer} is wrong answer ;(. Correct answer was ${conculationResult} 
+        \nLet's try again, again!, ${userName}!`
+    )
+  }
+}
+
+export const resultRepeat = (userName) => {
+  if (counter === 3) {
+    console.log(`Congratulations, ${userName}!`)
+    return null
+  }
+  return result(userName, counter)
+}
