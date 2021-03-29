@@ -1,5 +1,5 @@
-import { result } from '../src/prime.js'
-import { name } from '../src/prime.js'
+import { result } from '../src/games/prime.js'
+import { name } from '../src/games/prime.js'
 console.log('Welcome to the Brain Games!')
 const userName = name()
 console.log(`Hello, ${userName}!`)

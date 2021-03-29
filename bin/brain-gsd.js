@@ -1,5 +1,5 @@
-import { result } from '../src/gsd.js'
-import { name } from '../src/gsd.js'
+import { result } from '../src/games/gsd.js'
+import { name } from '../src/games/gsd.js'
 console.log('Welcome to the Brain Games!')
 const userName = name()
 console.log(`Hello, ${userName}!`)

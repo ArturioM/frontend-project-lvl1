@@ -1,5 +1,5 @@
-import { result } from '../src/even.js'
-import { name } from '../src/even.js'
+import { result } from '../src/games/even.js'
+import { name } from '../src/games/even.js'
 console.log('Welcome to the Brain Games!')
 const userName = name()
 console.log(`Hello, ${userName}!`)

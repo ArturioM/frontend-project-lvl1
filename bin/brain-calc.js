@@ -1,5 +1,5 @@
-import { result } from '../src/calc.js'
-import { name } from '../src/calc.js'
+import { result } from '../src/games/calc.js'
+import { name } from '../src/games/calc.js'
 
 console.log('Welcome to the Brain Games!')
 const userName = name()
