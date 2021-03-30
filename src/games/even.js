@@ -19,7 +19,7 @@ export const result = (userName) => {
       return resultRepeat(userName);
     }
     console.log(
-      `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again!, ${userName}!`,
+      `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again!, ${userName}!`,
     );
   } else {
     if (answer === 'no') {
@@ -29,7 +29,7 @@ export const result = (userName) => {
       return resultRepeat(userName);
     }
     console.log(
-      `'no' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`,
+      `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`,
     );
   }
   return null;
