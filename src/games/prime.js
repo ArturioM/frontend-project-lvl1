@@ -30,7 +30,7 @@ export const result = (userName) => {
     return resultRepeat(userName);
   }
   console.log(
-    `${answer} is wrong answer ;(. Correct answer was ${conculationResult} 
+    `"${answer}" is wrong answer ;(. Correct answer was "${conculationResult}" 
 \nLet's try again, again!, ${userName}!`,
   );
   return null;

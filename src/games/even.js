@@ -9,6 +9,7 @@ export const question = () => readlineSync.question('Your answer: ');
 let counter = 0;
 export const result = (userName) => {
   const number = getRandomInRange(1, 100);
+  const conculation = number % 2 === 0 ? 'yes' : 'no';
   console.log(`Question: ${number}`);
   const answer = question();
   if (number % 2 === 0) {
@@ -19,7 +20,7 @@ export const result = (userName) => {
       return resultRepeat(userName);
     }
     console.log(
-      `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again!, ${userName}!`,
+      `"${answer}" is wrong answer ;(. Correct answer was "${conculation}".\nLet's try again!, ${userName}!`,
     );
   } else {
     if (answer === 'no') {
@@ -29,7 +30,7 @@ export const result = (userName) => {
       return resultRepeat(userName);
     }
     console.log(
-      `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`,
+      `"${answer}" is wrong answer ;(. Correct answer was "${conculation}".\nLet's try again, ${userName}!`,
     );
   }
   return null;
