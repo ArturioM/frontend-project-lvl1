@@ -20,7 +20,7 @@ export const result = (userName) => {
       return resultRepeat(userName);
     }
     console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${conculation}'.\nLet's try again!, ${userName}!`,
+      `'${answer}' is wrong answer ;(. Correct answer was '${conculation}'.\nLet's try again, ${userName}!`,
     );
   } else {
     if (answer === 'no') {
