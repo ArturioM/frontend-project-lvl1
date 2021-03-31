@@ -22,11 +22,11 @@ export const result = (userName) => {
     }
     return res;
   };
-  const conculationResult = conculation(number1, number2, bigNumber);
+  const conculationResult = String(conculation(number1, number2, bigNumber));
 
   console.log(`Question: ${number1} ${number2}`);
   const answer = question();
-  if (Number(answer) === conculationResult) {
+  if (answer === conculationResult) {
     console.log('Correct!');
     counter += 1;
     // eslint-disable-next-line no-use-before-define
