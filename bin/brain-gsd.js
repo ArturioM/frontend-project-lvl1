@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { result, name } from '../src/games/gsd.js';
 
 console.log('Welcome to the Brain Games!');
