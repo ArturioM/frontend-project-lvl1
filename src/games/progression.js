@@ -45,7 +45,7 @@ export const result = (userName) => {
     return resultRepeat(userName);
   }
   console.log(
-    `${answer} is wrong answer ;(. Correct answer was ${numberNeed} \nLet's try again, again!, ${userName}!`,
+    `${answer} is wrong answer ;(. Correct answer was ${numberNeed} \nLet's try again, ${userName}!`,
   );
   return null;
 };

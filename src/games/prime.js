@@ -31,7 +31,7 @@ export const result = (userName) => {
   }
   console.log(
     `"${answer}" is wrong answer ;(. Correct answer was "${conculationResult}" 
-\nLet's try again, again!, ${userName}!`,
+\nLet's try again, ${userName}!`,
   );
   return null;
 };
