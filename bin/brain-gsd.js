@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { result, name } from '../src/games/gsd.js';
+import { result, name } from '../src/gsd.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = name();
