@@ -8,6 +8,6 @@
 
 https://asciinema.org/a/404010 - brain-even
 https://asciinema.org/a/404003 - brain-calc
-https://asciinema.org/a/404004 - brain-gsd
-https://asciinema.org/a/404005 = brain-progression
+https://asciinema.org/a/404004 - brain-gcd
+https://asciinema.org/a/404005 - brain-progression
 https://asciinema.org/a/404007 - brain-prime
