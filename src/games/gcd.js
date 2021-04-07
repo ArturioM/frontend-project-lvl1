@@ -1,19 +1,12 @@
-import readlineSync from 'readline-sync';
+import playGame from '../index.js';
+import getRandomInRange from '../mathRandom/random-number.js';
 
-export function getRandomInRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-export const name = () => readlineSync.question('May I have your name? ');
-export const question = () => readlineSync.question('Your answer: ');
-
-let counter = 0;
-export const result = (userName) => {
+const result = () => {
   const number1 = getRandomInRange(1, 100);
   const number2 = getRandomInRange(1, 100);
+  const question = `${number1} ${number2}`;
   const bigNumber = number1 > number2 ? number1 : number2;
-
-  const conculation = (numberOne, numberTwo, numberBig) => {
+  const calculation = (numberOne, numberTwo, numberBig) => {
     let res = 0;
     for (let i = 0; i <= numberBig; i += 1) {
       if (numberOne % i === 0 && numberTwo % i === 0) {
@@ -22,26 +15,12 @@ export const result = (userName) => {
     }
     return res;
   };
-  const conculationResult = String(conculation(number1, number2, bigNumber));
-
-  console.log(`Question: ${number1} ${number2}`);
-  const answer = question();
-  if (answer === conculationResult) {
-    console.log('Correct!');
-    counter += 1;
-    // eslint-disable-next-line no-use-before-define
-    return resultRepeat(userName);
-  }
-  console.log(
-    `'${answer}' is wrong answer ;(. Correct answer was '${conculationResult}'. \nLet's try again, ${userName}!`,
-  );
-  return null;
+  const calcutionResult = String(calculation(number1, number2, bigNumber));
+  const answerAndCalculation = [question, calcutionResult];
+  return answerAndCalculation;
 };
 
-export const resultRepeat = (userName) => {
-  if (counter === 3) {
-    console.log(`Congratulations, ${userName}!`);
-    return null;
-  }
-  return result(userName, counter);
+export default () => {
+  const task = 'Find the greatest common divisor of given numbers.';
+  playGame(result, task);
 };

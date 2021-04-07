@@ -1,20 +1,12 @@
-import readlineSync from 'readline-sync';
+import playGame from '../index.js';
+import getRandomInRange from '../mathRandom/random-number.js';
 
-export const question = () => readlineSync.question('Your answer: ');
-export const name = () => readlineSync.question('May I have your name? ');
-
-export function getRandomInRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-let counter = 0;
-export const result = (userName) => {
+const result = () => {
   const numberStart = getRandomInRange(6, 15);
   const numberStep = getRandomInRange(3, 6);
   const numberEmpty = getRandomInRange(1, 8);
   const numberNeed = numberStart + numberStep * (numberEmpty + 1);
-
-  const conculation = (startNumber, stepNumber, emptyNumber) => {
+  const questionAll = (startNumber, stepNumber, emptyNumber) => {
     // eslint-disable-next-line no-shadow
     const result = [];
     let partResult = startNumber;
@@ -30,30 +22,18 @@ export const result = (userName) => {
     return result;
   };
 
-  const conculationResult = conculation(
+  const questionAllResult = questionAll(
     numberStart,
     numberStep,
     numberEmpty,
   ).join(' ');
-
-  console.log(`Question: ${conculationResult}`);
-  const answer = question();
-  if (Number(answer) === numberNeed) {
-    console.log('Correct!');
-    counter += 1;
-    // eslint-disable-next-line no-use-before-define
-    return resultRepeat(userName);
-  }
-  console.log(
-    `${answer} is wrong answer ;(. Correct answer was ${numberNeed} \nLet's try again, ${userName}!`,
-  );
-  return null;
+  const question = `${questionAllResult}`;
+  const calcutionResult = String(numberNeed);
+  const answerAndCalculation = [question, calcutionResult];
+  return answerAndCalculation;
 };
 
-export const resultRepeat = (userName) => {
-  if (counter === 3) {
-    console.log(`Congratulations, ${userName}!`);
-    return null;
-  }
-  return result(userName, counter);
+export default () => {
+  const task = 'Find the greatest common divisor of given numbers.';
+  playGame(result, task);
 };
