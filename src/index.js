@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import greetingGame from './cli.js';
+import greetingGame from './utils/greeting.js';
 
 const counter = 3;
 
