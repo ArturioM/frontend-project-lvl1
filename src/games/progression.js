@@ -1,7 +1,9 @@
 import playGame from '../index.js';
-import getRandomInRange from '../mathRandom/random-number.js';
+import getRandomInRange from '../utils/random-number.js';
 
-const result = () => {
+const task = 'Find the greatest common divisor of given numbers.';
+
+const genRoundData = () => {
   const numberStart = getRandomInRange(6, 15);
   const numberStep = getRandomInRange(3, 6);
   const numberEmpty = getRandomInRange(1, 8);
@@ -34,6 +36,5 @@ const result = () => {
 };
 
 export default () => {
-  const task = 'Find the greatest common divisor of given numbers.';
-  playGame(result, task);
+  playGame(genRoundData, task);
 };

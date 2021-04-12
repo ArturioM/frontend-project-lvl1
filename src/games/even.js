@@ -1,15 +1,16 @@
 import playGame from '../index.js';
-import getRandomInRange from '../mathRandom/random-number.js';
+import getRandomInRange from '../utils/random-number.js';
 
-const result = () => {
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isEven = (number) => number % 2 === 0;
+
+const genRoundData = () => {
   const number = getRandomInRange(1, 100);
-  const calcutionResult = number % 2 === 0 ? 'yes' : 'no';
-  const question = number;
-  const answerAndCalculation = [question, calcutionResult];
-  return answerAndCalculation;
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const question = String(number);
+  return [question, correctAnswer];
 };
 
 export default () => {
-  const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-  playGame(result, task);
+  playGame(genRoundData, task);
 };

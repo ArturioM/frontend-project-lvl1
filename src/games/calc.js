@@ -1,7 +1,9 @@
 import playGame from '../index.js';
-import getRandomInRange from '../mathRandom/random-number.js';
+import getRandomInRange from '../utils/random-number.js';
 
-const result = () => {
+const task = 'What is the result of the expression?';
+
+const genRoundData = () => {
   const number1 = getRandomInRange(1, 10);
   const number2 = getRandomInRange(1, 10);
   const randomOperator = getRandomInRange(0, 2);
@@ -31,6 +33,5 @@ const result = () => {
 };
 
 export default () => {
-  const task = 'What is the result of the expression?';
-  playGame(result, task);
+  playGame(genRoundData, task);
 };
