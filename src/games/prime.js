@@ -3,12 +3,12 @@ import getRandomInRange from '../utils/random-number.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const conculatition = (simpleNumber) => {
-  if (simpleNumber <= 1) {
+const conculatition = (number) => {
+  if (number <= 1) {
     return false;
   }
-  for (let i = 2; i < simpleNumber; i += 1) {
-    if (simpleNumber % i === 0) {
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
       return false;
     }
   }
@@ -16,10 +16,10 @@ const conculatition = (simpleNumber) => {
 };
 
 const genRoundData = () => {
-  const numberSimple = getRandomInRange(1, 100);
-  const question = numberSimple;
-  const calcutionResult = conculatition(numberSimple) ? 'yes' : 'no';
-  const answerAndCalculation = [question, calcutionResult];
+  const number = getRandomInRange(1, 100);
+  const question = String(number);
+  const correctAnswer = conculatition(number) ? 'yes' : 'no';
+  const answerAndCalculation = [question, correctAnswer];
   return answerAndCalculation;
 };
 

@@ -1,14 +1,13 @@
 import readlineSync from 'readline-sync';
-import greetingGame from './utils/greeting.js';
 
-const counter = 3;
+const roundCount = 3;
 
 export default (genRoundData, task) => {
-  greetingGame();
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(task);
-  for (let i = 0; i < counter; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     const [quest, correctAnswer] = genRoundData();
     console.log(`Question: ${quest}`);
     const answer = readlineSync.question('Your answer: ');
