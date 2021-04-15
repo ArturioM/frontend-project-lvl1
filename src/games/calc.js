@@ -18,12 +18,11 @@ const calculation = (num1, num2, randomOp, operatorss) => {
       return null;
   }
 };
-
 const genRoundData = () => {
   const number1 = getRandomInRange(1, 10);
   const number2 = getRandomInRange(1, 10);
   const operators = ['+', '-', '*'];
-  const randomOperator = getRandomInRange(0, operators.length);
+  const randomOperator = getRandomInRange(0, operators.length - 1);
   const operator = operators[randomOperator];
   const question = `${number1} ${operator} ${number2}`;
   const calcutionResult = String(

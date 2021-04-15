@@ -5,11 +5,11 @@ const task = 'Find the greatest common divisor of given numbers.';
 const progressionLength = 10;
 const hiddenElementIndex = getRandomInRange(1, 8);
 
-const questionAll = (startNumber, stepNumber, hiddenElementIndex) => {
+const questionAll = (startNumber, stepNumber, elementIndexHidden) => {
   const result = [];
   let currentElement = startNumber;
   for (let i = 0; i < progressionLength; i += 1) {
-    if (i === hiddenElementIndex) {
+    if (i === elementIndexHidden) {
       result.push('..');
     } else {
       result.push(currentElement);
